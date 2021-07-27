@@ -1,5 +1,12 @@
-# Check that global variables work
+# Check that global variable set works
+assert_equal 'string', %q{
+  def foo
+    $foo = "string"
+  end
 
+  foo
+}
+# Check that global variables work
 assert_equal 'string', %q{
   $foo = "string"
 
